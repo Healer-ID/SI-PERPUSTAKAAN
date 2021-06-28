@@ -210,7 +210,7 @@ h4{font-size:85%;}
                                                 
                                             </tr></thead><tbody>
                                             <?php 
-                                            $brgs=mysqli_query($conn,"SELECT * from sstock_brg order by nama ASC");
+                                            $brgs=mysqli_query($koneksi,"SELECT * from sstock_brg order by nama ASC");
                                             $no=1;
                                             while($p=mysqli_fetch_array($brgs)){
                                                 $idb = $p['idx'];

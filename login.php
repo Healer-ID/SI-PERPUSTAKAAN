@@ -85,8 +85,8 @@ if(isset($_GET['pesan'])){
 
 if(isset($_POST['btn-login']))
 {
- $uname = mysqli_real_escape_string($conn,$_POST['username']);
- $upass = mysqli_real_escape_string($conn,md5($_POST['password']));
+ $uname = mysqli_real_escape_string($koneksi,$_POST['username']);
+ $upass = mysqli_real_escape_string($koneksi,md5($_POST['password']));
 
  // menyeleksi data user dengan username dan password yang sesuai
 $login = mysqli_query($koneksi,"select * from slogin where username='$uname' and password='$upass';");
