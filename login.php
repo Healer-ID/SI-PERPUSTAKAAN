@@ -64,7 +64,7 @@
   </style></head>
 <?php
 session_start();
-include 'dbconnect.php';
+include 'koneksi.php';
 
 if(isset($_SESSION['role'])){
     header("location:stock");
@@ -89,7 +89,7 @@ if(isset($_POST['btn-login']))
  $upass = mysqli_real_escape_string($conn,md5($_POST['password']));
 
  // menyeleksi data user dengan username dan password yang sesuai
-$login = mysqli_query($conn,"select * from slogin where username='$uname' and password='$upass';");
+$login = mysqli_query($koneksi,"select * from slogin where username='$uname' and password='$upass';");
 // menghitung jumlah data yang ditemukan
 $cek = mysqli_num_rows($login);
  
