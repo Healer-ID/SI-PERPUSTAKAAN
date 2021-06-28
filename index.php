@@ -3,7 +3,7 @@
 
 <?php
 session_start();
-include 'dbconnect.php';
+include 'koneksi.php';
 
 if(isset($_SESSION['role'])){
     header("location:stock");
@@ -148,7 +148,7 @@ h4{font-size:85%;}
             <!-- header area end -->
             <?php 
             
-                $periksa_bahan=mysqli_query($conn,"select * from sstock_brg where stock <1");
+                $periksa_bahan=mysqli_query($koneksi,"select * from sstock_brg where stock <1");
                 while($p=mysqli_fetch_array($periksa_bahan)){   
                     if($p['stock']<=1){ 
                         ?>  
