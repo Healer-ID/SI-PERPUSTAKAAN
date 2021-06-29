@@ -11,8 +11,6 @@
       background-repeat: no-repeat;
 
 
-
-
     }
     #wrapper {
       background-color: #f5f5f5;
