@@ -1,5 +1,5 @@
 <?php 
-// isi nama host, username mysql, dan password mysql anda
+// isi nama host, username mysql, dan password
 $conn = mysqli_connect("localhost","root","","si-perpustakaan");
 
 ?>
