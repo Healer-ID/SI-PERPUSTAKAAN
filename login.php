@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Login </title>
@@ -164,30 +164,23 @@ h4{font-size:65%;}
             <div align="center">
 
 <br><br><br><br><br><br>
-
+        
             <form>
-              <div id="wrapper">
+            <div id="wrapper">
             <div class="container" style="color:black">
-                        <a href="index.php"><img src="smk.png" alt="logo" width="30%"></a>
-                    <h5 style="color: black" <img src="smk.png">LOGIN ADMINISTRASI <br>SMK TARUNA BANGSA </h5>
-                    
-                    </div>
+                        <a href="index.php"><img src="smk.png" alt="logo" width="20%"></a>
+                    <h5 style="color: black">LOGIN ADMINISTRASI <br>SMK TARUNA BANGSA </h5> 
+            </div>
             </form>    
                 <form method="post">
                     <div class="form-group">
-                        
                         <input type="text"  placeholder="Username" name="username" autofocus>
-                    </div>
-                    <div class="form-group">
-                       
                         <input type="password" placeholder="Password" name="password">
                     </div>
                     
                     <button type="submit" class="btn btn-primary" name="btn-login">Masuk</button>
-            
                 </form>
 
-                
             </div></form></div>
             <br>
         </div></div></form>
