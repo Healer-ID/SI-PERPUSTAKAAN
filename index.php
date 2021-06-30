@@ -164,7 +164,7 @@ h4{font-size:85%;}
                 }
                 ?>
             <p></p>
-            <p align="right"><a href="login.php" class="btn btn-primary" >Login</a></p>
+            <h1 align="right"><a href="login.php" class="btn btn-primary" >Login</a></h1>
             <img src="smk.png" width="150px" height="150px">
             <h2 align="center">Selamat Datang Di Perpustakaan</h2>
             <h2 align="center">SMK Taruna Bangsa</h2>
@@ -193,12 +193,10 @@ h4{font-size:85%;}
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center" >
                                 </div>
-                                 <p><button style="float: right" style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span>Tambah</button></p>
-                                 
-                                 
+                                <p align="right"><button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span>Pinjam Buku</button>
                                     <div class="data-tables datatable-dark">
-                                         <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark" >
-                                            <tr>
+                                         <table align="center" id="dataTable3" class="display" style="width:100%"><thead class="thead-dark" >
+                                            <tr bgcolor="black" style="color: white">
                                                 <th>No</th>
                                                 <th>Judul Buku</th>
                                                 <th>Penerbit</th>
@@ -254,18 +252,26 @@ h4{font-size:85%;}
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Input Barang Keluar</h4>
+                            <h4 class="modal-title" align="center">DATA PEMINJAMAN</h4>
                         </div>
                         <div class="modal-body">
                             <form action="barang_keluar_act.php" method="post">
                                 <div class="form-group">
-                                    <label>Tanggal</label>
-                                    <input name="tanggal" type="date" class="form-control">
+                                    <label>NISN</label>
+                                    <input name="nisn" type="text" class="form-control" placeholder="Masukkan NISN">
                                 </div>
                                 <div class="form-group">
-                                    <label>Nama Barang</label>
+                                    <label>Nama</label>
+                                    <input name="nama" type="text" class="form-control" placeholder="Masukkan Nama">
+                                </div>
+                                <div class="form-group">
+                                    <label>Kelas</label>
+                                    <input name="kelas" type="text" class="form-control" placeholder="Masukkan Kelas">
+                                </div>
+                                <div class="form-group">
+                                    <label>Identitas Buku</label>
                                     <select name="barang" class="custom-select form-control">
-                                    <option selected>Pilih barang</option>
+                                    <option selected>Judul Buku, id_buku, stock</option>
                                     <?php
                                     $det=mysqli_query($conn,"select * from sstock_brg order by nama ASC")or die(mysqli_error());
                                     while($d=mysqli_fetch_array($det)){
@@ -282,24 +288,22 @@ h4{font-size:85%;}
                                     <input name="qty" type="number" min="1" class="form-control" placeholder="Qty">
                                 </div>
                                 <div class="form-group">
-                                    <label>Penerima</label>
-                                    <input name="penerima" type="text" class="form-control" placeholder="Penerima barang">
+                                    <label>Tanggal Pinjam   :</label>
                                 </div>
                                 <div class="form-group">
-                                    <label>Keterangan</label>
-                                    <input name="ket" type="text" class="form-control" placeholder="Keterangan">
+                                    <label>Tanggal Kembali   :</label>
                                 </div>
+                                
+
                                 
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                                <input type="submit" class="btn btn-primary" value="Simpan">
+                                <input type="submit" class="btn btn-primary" value="Kirim">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-    
     <script>
         $(document).ready(function() {
         $('input').on('keydown', function(event) {
