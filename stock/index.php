@@ -222,6 +222,13 @@
                 </div>
             </div>
             <!-- page title area end -->
+
+            <!-- Dashboard Jumlah -->
+
+
+            <!-- Dashboard Jumlah end-->
+
+
             <div class="main-content-inner">
                
                 <!-- market value area start -->
@@ -237,14 +244,14 @@
                                          <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
                                             <tr>
                                                 <th>No</th>
-                                                <th>Id.Buku</th>
                                                 <th>Judul Buku</th>
                                                 <th>Penerbit</th>
                                                 <th>pengarang</th>
-                                                <th>Tahun</th>
-                                                <th>Jml.Buku</th>
-                                                <th>rak buku</th>
-                                                <th>Aksi</th>
+                                                <th>id Buku</th>
+                                                <th>Stock</th>
+                                                <th>Letak</th>
+                                                <th>Id Peminjaman</th>
+                                                <th>Opsi</th>
                                             </tr></thead><tbody>
                                             <?php 
                                             $brgs=mysqli_query($conn,"SELECT * from sstock_brg order by nama ASC");
@@ -262,7 +269,7 @@
                                                     <td><?php echo $p['stock'] ?></td>
                                                     <td><?php echo $p['satuan'] ?></td>
                                                     <td><?php echo $p['lokasi'] ?></td>
-                                                    <td><button data-toggle="modal" data-target="#edit<?=$idb;?>" class="btn btn-primary">Edit</button> <button data-toggle="modal" data-target="#del<?=$idb;?>" class="btn btn-danger">Del</button></td>
+                                                    <td><button data-toggle="modal" data-target="#edit<?=$idb;?>" class="btn btn-warning">Edit</button> <button data-toggle="modal" data-target="#del<?=$idb;?>" class="btn btn-danger">Del</button></td>
                                                 </tr>
 
 
